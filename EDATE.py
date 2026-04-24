@@ -14,13 +14,13 @@ def main(before, after, exclude):
 	
 	for file in files:
 		if file in EXCLUDE: break
-	with open(file) as f:
-		contents = f.read()
-	for i in range(len(before)):
-		for j in range(len(before[i])):
-			contents = contents.replace(before[i][j], after[i] if type(after[i])==str else after[i][j])
-	with open(file, "w") as f:
-		f.write(contents)
+        with open(file) as f:
+            contents = f.read()
+        for i in range(len(before)):
+            for j in range(len(before[i])):
+                contents = contents.replace(before[i][j], after[i] if type(after[i])==str else after[i][j])
+        with open(file, "w") as f:
+            f.write(contents)
 
 p = argparse.ArgumentParser("Change the names")
 
