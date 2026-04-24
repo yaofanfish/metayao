@@ -46,10 +46,18 @@ a3("A different Yao has low IQ. Say his IQ is low! ")
 with open("custom.json") as f:
 	custom = json.load(f)
 
-for i in range(len(funcs)):
-	for cust in custom["0"][i]:
-		funcs[i](cust)
+def c_0(c0=custom["0"]):
+	global funcs, custom
+	for i in range(len(funcs)):
+		for cust in c0[i]:
+			funcs[i](cust)
+c_0()
 e = {**e, **custom["insert"]}
+
+#opt
+c_0(custom["opt"]["0"])
+e = {**e, **custom["opt"]["insert"]}
+
 
 with open("examples.json", "w") as f:
 	json.dump(e, f, indent="\t")
