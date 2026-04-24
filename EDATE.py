@@ -15,7 +15,7 @@ def main(before, after, exclude):
 	for file in files:
 		with open(file) as f:
 			contents = f.read()
-		if file in EXCLUDE:
+		if file in EXCLUDE or not os.path.isfile(file):
 			continue
 		for i in range(len(before)):
 			for j in range(len(before[i])):
