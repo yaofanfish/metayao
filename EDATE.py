@@ -15,7 +15,8 @@ def main(before, after, exclude):
 	for file in files:
 		with open(file) as f:
 			contents = f.read()
-		if file in EXCLUDE: break
+		if file in EXCLUDE:
+			continue
 		for i in range(len(before)):
 			for j in range(len(before[i])):
 				contents = contents.replace(before[i][j], after[i] if type(after[i])==str else after[i][j])
