@@ -13,10 +13,10 @@ def main(before, after, exclude):
 	files = os.listdir()
 	
 	for file in files:
-		with open(file) as f:
-			contents = f.read()
 		if file in EXCLUDE or not os.path.isfile(file):
 			continue
+		with open(file) as f:
+			contents = f.read()
 		for i in range(len(before)):
 			for j in range(len(before[i])):
 				contents = contents.replace(before[i][j], after[i] if type(after[i])==str else after[i][j])
