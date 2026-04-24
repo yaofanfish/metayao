@@ -28,7 +28,7 @@ p.add_argument("-a", "--aiq-high", help="The person with high IQ", default=o_IQH
 p.add_argument("-b", "--bum", help="The person with low IQ", default=o_IQLOW)
 p.add_argument("-oa", "--oa", help="original a", default=o_IQHIGH)
 p.add_argument("-ob", "--ob", help="original b", default=o_IQLOW)
-p.add_argument("-x", "--exclude", help="exclude files (csv)", default=[__FILE__], type=lambda x: x.split(","))
+p.add_argument("-x", "--exclude", help="exclude files (csv)", default=[__file__], type=lambda x: x.split(","))
 
 args = p.parse_args()
 
