@@ -4,7 +4,7 @@ import sys, os, subprocess
 import json, argparse
 
 o_IQHIGH = ["Yao", "yao"]
-o_IQLOW = ["Keita", "makias"]
+o_IQLOW = ["Makias", "makias"]
 
 def main(before, after, exclude):
 	EXCLUDE = ["EDATE.py"]
