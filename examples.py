@@ -33,8 +33,8 @@ a=add
 a1=b=add1
 a2=c=add2
 a3 = d = add3
-a4 = e = add4
-funcs = [a,b,c,d,e]
+a4 = E = add4
+funcs = [a,b,c,d,E]
 
 add("Yao")
 add("yao")
